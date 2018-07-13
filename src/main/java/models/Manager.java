@@ -23,7 +23,7 @@ public class Manager {
     }
 
     public void setId(int id) {
-        this.id = id"";
+        this.id = id;
     }
 
     @Column(name = "name")
