@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -16,12 +17,12 @@ public class Team {
 
     public Team(){}
 
-    public Team(String name, List<Player> players, Manager manager, List<Competition> competitions, int currentPoints) {
+    public Team(String name, Manager manager, int currentPoints) {
         this.id = id;
         this.name = name;
-        this.players = players;
+        this.players = new ArrayList<Player>();
         this.manager = manager;
-        this.competitions = competitions;
+        this.competitions = new ArrayList<Competition>();
         this.currentPoints = currentPoints;
     }
 
