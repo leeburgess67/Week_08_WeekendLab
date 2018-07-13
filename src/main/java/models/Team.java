@@ -1,5 +1,7 @@
 package models;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,8 @@ public class Team {
     private List<Competition> competitions;
     private int currentPoints;
 
-    public Team(){}
+    public Team() {
+    }
 
     public Team(String name, Manager manager, int currentPoints) {
         this.id = id;
@@ -66,7 +69,11 @@ public class Team {
         this.manager = manager;
     }
 
-    @Column(name = "competitions")
+    @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
+    @ManyToMany
+    @JoinTable(name = "teams_competitions",
+            joinColumns = {@JoinColumn(name = "team_id", nullable = false, updatable = false)},
+            inverseJoinColumns = {@JoinColumn(name = "competition_id", nullable = false, updatable = false)})
     public List<Competition> getCompetitions() {
         return competitions;
     }
@@ -74,6 +81,7 @@ public class Team {
     public void setCompetitions(List<Competition> competitions) {
         this.competitions = competitions;
     }
+
     @Column(name = "current_points")
     public int getCurrentPoints() {
         return currentPoints;
