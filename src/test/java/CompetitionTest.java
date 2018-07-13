@@ -1,0 +1,2 @@
+public class CompetitionTest {
+}
