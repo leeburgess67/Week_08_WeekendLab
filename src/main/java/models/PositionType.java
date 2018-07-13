@@ -10,7 +10,8 @@ public enum PositionType {
     DEFENSIVE_MIDFIELDER,
     ATTACKING_MIDFIELDER,
     RIGHT_WING,
-    STRIKER
+    STRIKER,
+    GOALKEEPER
 }
 
 

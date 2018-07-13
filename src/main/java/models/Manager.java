@@ -38,7 +38,6 @@ public class Manager {
     }
 
     @OneToOne(mappedBy = "manager", fetch = FetchType.LAZY)
-    @Column(name = "team")
     public Team getTeam() {
         return team;
     }
