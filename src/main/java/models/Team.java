@@ -50,7 +50,6 @@ public class Team {
     }
 
     @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
-    @Column(name = "players")
     public List<Player> getPlayers() {
         return players;
     }

@@ -19,6 +19,7 @@ public class Runner {
         Team celtic = new Team("Celtic FC", rodgers, 25);
         DBHelper.save(celtic);
 
+
         Team barcelona = new Team("Barcelona FC",valverde, 50);
         DBHelper.save(barcelona);
 
@@ -37,13 +38,6 @@ public class Runner {
         Player messi = new Player("Lionel Messi", PositionType.STRIKER, celtic);
         DBHelper.save(messi);
 
-        List<Player> players = new ArrayList<Player>();
-        players.add(dembele);
-        players.add(brown);
-        players.add(tierney);
-        players.add(gordon);
-        celtic.setPlayers(players);
-        DBHelper.save(celtic);
 
 //        List<Team> teams = new ArrayList<Team>();
 //        teams.add(celtic);
@@ -51,8 +45,8 @@ public class Runner {
 //        Competition championsLeague = new Competition(CompetitionType.CHAMPIONS_LEAGUE, teams );
 //        DBHelper.save(championsLeague);
 
-//        List<Player> playersInTeam = DBTeam.getPlayersFromTeam(celtic);
-//TODO: Get players from team method returning 0
+        List<Player> playersInTeam = DBTeam.getPlayersFromTeam(celtic);
+
 
     }
 }

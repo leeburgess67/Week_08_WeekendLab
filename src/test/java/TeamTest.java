@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 public class TeamTest {
 
@@ -40,6 +41,7 @@ public class TeamTest {
     public void canGetCompetitionType(){
         assertEquals(CompetitionType.CHAMPIONS_LEAGUE, champ.getCompetition());
     }
+
 
 
 }
