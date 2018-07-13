@@ -2,6 +2,8 @@ package models;
 
 import javax.persistence.*;
 
+@Entity
+@Table(name = "managers")
 public class Manager {
 
     private int id;
@@ -44,9 +46,5 @@ public class Manager {
     public void setTeam(Team team) {
         this.team = team;
     }
-
-
-
-
 
 }

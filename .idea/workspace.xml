@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe6f123d-cdaa-40ec-970f-e65688174560" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Team.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,8 +19,8 @@
       <file leaf-file-name="Manager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/models/Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="765">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="e#375#376#0" expanded="true" />
                 <element signature="e#400#401#0" expanded="true" />
@@ -36,6 +35,15 @@
                 <element signature="e#745#746#0" expanded="true" />
                 <element signature="e#777#778#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Team.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -85,10 +93,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ManagerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ManagerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="322">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -120,8 +128,9 @@
         <option value="$PROJECT_DIR$/src/main/java/DBHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/DBHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/db/HibernateUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Manager.java" />
         <option value="$PROJECT_DIR$/src/test/java/ManagerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Manager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Team.java" />
       </list>
     </option>
   </component>
@@ -133,9 +142,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="22" />
     <option name="width" value="1440" />
-    <option name="height" value="878" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -325,6 +333,9 @@
     <history-entry file="ManagerTest_canGetName - 2018.07.13 at 11h 36m 35s.xml">
       <configuration name="ManagerTest.canGetName" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ManagerTest_canGetName - 2018.07.13 at 11h 36m 37s.xml">
+      <configuration name="ManagerTest.canGetName" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -340,15 +351,15 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32969698" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32969698" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -378,13 +389,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="19" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -444,10 +448,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ManagerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#143#144#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Manager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="765">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="e#375#376#0" expanded="true" />
             <element signature="e#400#401#0" expanded="true" />
@@ -465,16 +482,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ManagerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Team.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#143#144#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="221">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
         </state>
       </provider>
     </entry>
