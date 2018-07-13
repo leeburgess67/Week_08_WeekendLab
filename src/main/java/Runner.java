@@ -1,5 +1,6 @@
 import com.sun.java.swing.plaf.gtk.GTKConstants;
 import db.DBHelper;
+import db.DBTeam;
 import models.*;
 
 import java.util.ArrayList;
@@ -36,13 +37,22 @@ public class Runner {
         Player messi = new Player("Lionel Messi", PositionType.STRIKER, celtic);
         DBHelper.save(messi);
 
-        List<Team> teams = new ArrayList<Team>();
-        teams.add(celtic);
-        teams.add(barcelona);
-        Competition championsLeague = new Competition(CompetitionType.CHAMPIONS_LEAGUE, teams );
-        DBHelper.save(championsLeague);
+        List<Player> players = new ArrayList<Player>();
+        players.add(dembele);
+        players.add(brown);
+        players.add(tierney);
+        players.add(gordon);
+        celtic.setPlayers(players);
+        DBHelper.save(celtic);
 
+//        List<Team> teams = new ArrayList<Team>();
+//        teams.add(celtic);
+//        teams.add(barcelona);
+//        Competition championsLeague = new Competition(CompetitionType.CHAMPIONS_LEAGUE, teams );
+//        DBHelper.save(championsLeague);
 
+//        List<Player> playersInTeam = DBTeam.getPlayersFromTeam(celtic);
+//TODO: Get players from team method returning 0
 
     }
 }

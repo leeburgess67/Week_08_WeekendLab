@@ -16,6 +16,7 @@ public class Player {
     public Player(String name, PositionType position, Team team) {
         this.name = name;
         this.position = position;
+        this.team = team;
     }
 
     @Id
@@ -48,7 +49,7 @@ public class Player {
     }
 
     @ManyToOne
-    @JoinColumn(name = "team_id")
+    @JoinColumn(name = "team_id", nullable = false)
     public Team getTeam() {
         return team;
     }

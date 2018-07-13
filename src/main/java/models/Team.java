@@ -49,7 +49,7 @@ public class Team {
         this.name = name;
     }
 
-    @OneToMany(mappedBy = "team")
+    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
     @Column(name = "players")
     public List<Player> getPlayers() {
         return players;
