@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 
 public class CompetitionTest {
 
@@ -13,7 +15,6 @@ public class CompetitionTest {
     private Team barca;
     private List<Player> players;
     private Manager rodgers;
-    private int points;
     private List<Competition> competitions;
     private Competition champ;
     private Player player1;
@@ -41,6 +42,11 @@ public class CompetitionTest {
         assertEquals(CompetitionType.CHAMPIONS_LEAGUE, champ.getCompetition());
     }
 
-
-
+    @Test
+    public void canPlayGame(){
+        champ.playGame(celtic, barca);
+        assertEquals(53, celtic.getCurrentPoints());
+    }
 }
+
+

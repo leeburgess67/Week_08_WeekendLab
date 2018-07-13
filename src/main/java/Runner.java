@@ -1,4 +1,5 @@
 import com.sun.java.swing.plaf.gtk.GTKConstants;
+import db.DBCompetition;
 import db.DBHelper;
 import db.DBTeam;
 import models.*;
@@ -13,12 +14,17 @@ public class Runner {
         Manager rodgers = new Manager("Brendan Rodgers");
         DBHelper.save(rodgers);
 
+        Manager mciness = new Manager("Derek McIness");
+        DBHelper.save(mciness);
+
         Manager valverde = new Manager("Ernesto Valverde");
         DBHelper.save(rodgers);
 
         Team celtic = new Team("Celtic FC", rodgers, 25);
         DBHelper.save(celtic);
 
+        Team aberdeen = new Team("Aberdeen FC", mciness, 5);
+        DBHelper.save(aberdeen);
 
         Team barcelona = new Team("Barcelona FC",valverde, 50);
         DBHelper.save(barcelona);
@@ -39,13 +45,21 @@ public class Runner {
         DBHelper.save(messi);
 
 
-//        List<Team> teams = new ArrayList<Team>();
-//        teams.add(celtic);
-//        teams.add(barcelona);
-//        Competition championsLeague = new Competition(CompetitionType.CHAMPIONS_LEAGUE, teams );
-//        DBHelper.save(championsLeague);
+        List<Team> teams = new ArrayList<Team>();
+        teams.add(celtic);
+        teams.add(barcelona);
+        teams.add(aberdeen);
+        Competition championsLeague = new Competition(CompetitionType.CHAMPIONS_LEAGUE, teams );
+        DBHelper.save(championsLeague);
 
-        List<Player> playersInTeam = DBTeam.getPlayersFromTeam(celtic);
+//        List<Player> playersInTeam = DBTeam.getPlayersFromTeam(celtic);
+
+        List<Team> sortedTeamsByPoints = DBCompetition.sortTeamsByPoints(championsLeague);
+        // TODO: Always excludes top team from results
+
+
+
+
 
 
     }
