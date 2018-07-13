@@ -3,6 +3,8 @@ package models;
 import javax.persistence.*;
 import java.util.List;
 
+@Entity
+@Table(name = "teams")
 public class Team {
 
     private int id;
@@ -14,7 +16,7 @@ public class Team {
 
     public Team(){}
 
-    public Team(int id, String name, List<Player> players, Manager manager, List<Competition> competitions, int currentPoints) {
+    public Team(String name, List<Player> players, Manager manager, List<Competition> competitions, int currentPoints) {
         this.id = id;
         this.name = name;
         this.players = players;
@@ -43,6 +45,7 @@ public class Team {
         this.name = name;
     }
 
+    @OneToMany(mappedBy = "team")
     @Column(name = "players")
     public List<Player> getPlayers() {
         return players;
