@@ -20,13 +20,11 @@ public class Team {
     public Team() {
     }
 
-    public Team(String name, Manager manager, int currentPoints) {
+    public Team(String name, int currentPoints) {
         this.id = id;
         this.name = name;
-        this.players = new ArrayList<Player>();
-        this.manager = manager;
-        this.competitions = new ArrayList<Competition>();
         this.currentPoints = currentPoints;
+        this.competitions = new ArrayList<Competition>();
     }
 
     @Id
@@ -58,8 +56,7 @@ public class Team {
         this.players = players;
     }
 
-    @OneToOne
-    @JoinColumn(name = "manager_id", nullable = false)
+    @OneToOne(mappedBy = "team", fetch = FetchType.LAZY)
     public Manager getManager() {
         return manager;
     }
@@ -89,4 +86,11 @@ public class Team {
     public void setCurrentPoints(int currentPoints) {
         this.currentPoints = currentPoints;
     }
+
+    public void addCompetition(Competition competition){
+        this.competitions.add(competition);
+
+    }
+
+
 }

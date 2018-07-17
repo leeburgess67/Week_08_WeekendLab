@@ -17,8 +17,8 @@ public class PlayerTest {
 
     @Before
     public void before(){
-        rodgers = new Manager("Brendan Rodgers");
-        celtic = new Team("Celtic", rodgers, 50);
+        rodgers = new Manager("Brendan Rodgers", celtic);
+        celtic = new Team("Celtic", 50);
         brown = new Player("Scott Brown", PositionType.DEFENSIVE_MIDFIELDER, celtic);
 
     }

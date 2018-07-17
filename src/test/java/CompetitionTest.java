@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
 
 public class CompetitionTest {
 
@@ -15,7 +13,6 @@ public class CompetitionTest {
     private Team barca;
     private List<Player> players;
     private Manager rodgers;
-    private List<Competition> competitions;
     private Competition champ;
     private Player player1;
 
@@ -28,13 +25,13 @@ public class CompetitionTest {
         players = new ArrayList<Player>();
         player1 = new Player("New Player", PositionType.STRIKER, celtic);
         players.add(player1);
-        rodgers = new Manager("Brendan Rodgers");
-        celtic = new Team("Celtic", rodgers, 50);
-        barca = new Team("Barca", rodgers, 50);
+        rodgers = new Manager("Brendan Rodgers", celtic);
+        celtic = new Team("Celtic", 50);
+        barca = new Team("Barca", 50);
         List<Team> teams = new ArrayList<Team>();
         teams.add(barca);
         teams.add(celtic);
-        champ = new Competition(CompetitionType.CHAMPIONS_LEAGUE,teams);
+        champ = new Competition(CompetitionType.CHAMPIONS_LEAGUE);
     }
 
     @Test

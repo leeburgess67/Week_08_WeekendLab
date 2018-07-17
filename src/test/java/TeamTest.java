@@ -15,8 +15,8 @@ public class TeamTest {
 
     @Before
     public void before() {
-        rodgers = new Manager("Brendan Rodgers");
-        celtic = new Team("Celtic", rodgers, 50);
+        rodgers = new Manager("Brendan Rodgers", celtic);
+        celtic = new Team("Celtic", 50);
     }
 
     @Test

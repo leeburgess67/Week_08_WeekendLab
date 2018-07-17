@@ -3,6 +3,7 @@ package models;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -14,9 +15,9 @@ public class Competition {
     private CompetitionType competitionType;
     private List<Team> teams;
 
-    public Competition(CompetitionType competitionType, List<Team> teams) {
+    public Competition(CompetitionType competitionType) {
         this.competitionType = competitionType;
-        this.teams = teams;
+        this.teams = new ArrayList<Team>();
     }
 
     @Id
@@ -59,38 +60,40 @@ public class Competition {
     }
 
     public void playGame(Team team1, Team team2) {
-        int result = randomResult();
-        switch (result) {
-            // Team 1 wins - 3 points to team 2 - no points to team 2
-            case 1:
-                int
-                        winPoints = team1.getCurrentPoints();
-                team1.setCurrentPoints(winPoints += 3);
-                break;
+            int result = randomResult();
+            switch (result) {
+                // Team 1 wins - 3 points to team 2 - no points to team 2
+                case 1:
+                    int
+                            winPoints = team1.getCurrentPoints();
+                    team1.setCurrentPoints(winPoints += 3);
+                    break;
 
-            case 2:
-                //Draw - 1 point each team
-                int
-                        drawPoints1 = team1.getCurrentPoints();
-                team1.setCurrentPoints(drawPoints1 += 1);
+                case 2:
+                    //Draw - 1 point each team
+                    int
+                            drawPoints1 = team1.getCurrentPoints();
+                    team1.setCurrentPoints(drawPoints1 += 1);
 
-                int drawPoints2 = team2.getCurrentPoints();
-                team2.setCurrentPoints(drawPoints2 += 1);
+                    int drawPoints2 = team2.getCurrentPoints();
+                    team2.setCurrentPoints(drawPoints2 += 1);
+                    break;
 
+                case 3:
+                    // Team 2 wins - 3 points to team 2 - 0 to team 1
+                    int
+                            winPoints2 = team2.getCurrentPoints();
+                    team2.setCurrentPoints(winPoints2 += 1);
+                    break;
 
-                break;
+            }
 
-            case 3:
-                // Team 2 wins - 3 points to team 2 - 0 to team 1
-                int
-                        winPoints2 = team2.getCurrentPoints();
-                team2.setCurrentPoints(winPoints2 += 1);
-
-                break;
 
         }
 
+        public void addTeam(Team team){
+        this.teams.add(team);
+        }
     }
-}
 
 

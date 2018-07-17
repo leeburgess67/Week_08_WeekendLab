@@ -13,9 +13,9 @@ public class Manager {
     public Manager(){}
 
 
-    public Manager(String name){
+    public Manager(String name, Team team){
         this.name = name;
-        this. team = team;}
+        this.team = team;}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,7 +37,8 @@ public class Manager {
         this.name = name;
     }
 
-    @OneToOne(mappedBy = "manager", fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "team_id")
     public Team getTeam() {
         return team;
     }
